@@ -4,7 +4,6 @@
  * @return {number[][]}
  */
 var kClosest = function (points, k) {
-  console.log(points);
   let outPut = [];
   let closest=[];
   for (let i = 0; i < points.length; i++) {
