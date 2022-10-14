@@ -4,26 +4,24 @@
  * @return {number[][]}
  */
 var kClosest = function (points, k) {
+  console.log(points);
   let outPut = [];
-  let closest=[]
+  let closest=[];
   for (let i = 0; i < points.length; i++) {
-    let value = points[i][0] ** 2 + points[i][1] ** 2;
-    let distance = Math.sqrt(value);
-    outPut.push(value)
+    let value = Math.pow(points[i][0],2) + Math.pow(points[i][1],2);
+    outPut.push(value);
   }
-    
- outPut.sort(function(a, b){return a - b})
+  outPut.sort(function(a, b){return a - b});
+
   for (let i = 0; i < outPut.length; i++) {
     let count=0;
     for (let j = 0; j < points.length; j++) {
-        count+=1
-       if(outPut[i]== points[j][0] ** 2 + points[j][1] ** 2){
-        closest.push(points[count-1])
-        break;
+        count+=1;
+       if(outPut[i]== Math.pow(points[j][0],2) +Math.pow(points[j][1],2)){
+        closest.push(points[count-1]);
        }
       }  
   }
-
-  return closest.slice(0,k)
+  return closest.slice(0,k);
 
 };
