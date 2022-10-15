@@ -8,15 +8,8 @@ var numIdenticalPairs = function(nums) {
         for(let j=i+1;j<nums.length;j++){
             if(nums[i]==nums[j] && i<j){
                 count+=1
-
-            }
-        
+            }  
         }
-
     }
-  
-
     return count
-    
-    
 };
